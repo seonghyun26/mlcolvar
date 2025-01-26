@@ -28,7 +28,9 @@ def get_activation(activation: str):
     if activation == "relu":
         activ = torch.nn.ReLU(True)
     elif activation == "leakyrelu":
-        activ = torch.nn.LeakyReLU(0.001, True)    
+        activ = torch.nn.LeakyReLU(0.001, True)
+    elif activation == "swish" or activation == "silu":
+        activ = torch.nn.SiLU(True)    
     elif activation == "elu":
         activ = torch.nn.ELU(True)
     elif activation == "tanh":
